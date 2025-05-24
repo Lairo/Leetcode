@@ -17,9 +17,17 @@
             int[] numsC = [3, 3];
             int numsCTarget = 6;
 
+            //expected [0,1]
+
+            int[] numsD = [1, 3, 4, 2];
+            int numsDTarget = 6;
+
+            //expected [2,3]
+
             Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsA, numsATarget))} Target is {numsATarget}");
             Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsB, numsBTarget))} Target is {numsBTarget}");
             Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsC, numsCTarget))} Target is {numsCTarget}");            
+            Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsD, numsDTarget))} Target is {numsDTarget}");            
         }
     }
 }
