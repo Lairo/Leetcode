@@ -24,20 +24,10 @@ namespace Leetcode
 
         ////expected [2,3]
 
-            //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsA, numsATarget))} Target is {numsATarget}");
-            //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsB, numsBTarget))} Target is {numsBTarget}");
-            //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsC, numsCTarget))} Target is {numsCTarget}");            
-            //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsD, numsDTarget))} Target is {numsDTarget}"); 
-
-
-        // grab first digit in the array
-        // scan the array from the following digit add the next digit to the first
-        // if the addition sum equates to the target stop the scan
-        // store the two digits' array addresses as digits into a new third array
-        // return that array
-        // if the sum does not equate with any member from that array to the target, continue to the following member in the array and continue the scan 
-        // from there on out
-
+        //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsA, numsATarget))} Target is {numsATarget}");
+        //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsB, numsBTarget))} Target is {numsBTarget}");
+        //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsC, numsCTarget))} Target is {numsCTarget}");            
+        //Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsD, numsDTarget))} Target is {numsDTarget}"); 
 
         // Runtime 52ms (slow) beats 12%
         // Memory 47.88 (amazing) beats 98.71%
@@ -49,7 +39,6 @@ namespace Leetcode
             int c = 0;
             int d = 0;
 
-
             int[] result = new int[2];
 
             while (d == 0)
@@ -57,14 +46,11 @@ namespace Leetcode
                 for (int i = 1; i < nums.Length; i++)
                 {
                     if(i == a)
-                    {
                         i++;
-                    }
+                    
                     if (nums[i] + b == target)
                     {
-
                         c = a;
-
                         d = i;
                     }
                 }

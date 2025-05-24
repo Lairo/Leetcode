@@ -4,30 +4,30 @@
     {
         static void Main(string[] args)
         {
-            int[] numsA = [2, 7, 11, 15];
-            int numsATarget = 9;
+            int[] al1 = [2, 4, 3];
+            int[] al2 = [5, 6, 4];
 
-            //expected [0,1]
+            string solveA = "[7,0,8]";
+            // expected [7,0,8]
+            // explanation 342 + 465 = 807
 
-            int[] numsB = [3, 2, 4];
-            int numsBTarget = 6;
+            int[] bl1 = [0];
+            int[] bl2 = [0];
 
-            //expected [1,2]
+            string solveB = "[0]";
+            // expected [0]
 
-            int[] numsC = [3, 3];
-            int numsCTarget = 6;
+            int[] cl1 = [9, 9, 9, 9, 9, 9, 9];
+            int[] cl2 = [9, 9, 9, 9];
 
-            //expected [0,1]
-
-            int[] numsD = [1, 3, 4, 2];
-            int numsDTarget = 6;
+            string solveC = "[8, 9, 9, 9, 0, 0, 0, 1]";
+            // expected [8,9,9,9,0,0,0,1]
 
             //expected [2,3]
 
-            Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsA, numsATarget))} Target is {numsATarget}");
-            Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsB, numsBTarget))} Target is {numsBTarget}");
-            Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsC, numsCTarget))} Target is {numsCTarget}");            
-            Console.WriteLine($"\t {string.Join(", ", Q1TwoSum.TwoSum(numsD, numsDTarget))} Target is {numsDTarget}");            
+            Console.WriteLine($"\t {string.Join(", ", Q2AddTwoNumbers.Solution(al1, al2))} Expected Solution {solveA}");
+            Console.WriteLine($"\t {string.Join(", ", Q2AddTwoNumbers.Solution(bl1, bl2))} Expected Solution {solveB}");
+            Console.WriteLine($"\t {string.Join(", ", Q2AddTwoNumbers.Solution(cl2, cl2))} Expected Solution {solveC}");
         }
     }
 }
