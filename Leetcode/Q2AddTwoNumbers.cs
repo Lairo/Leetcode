@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Leetcode
 {
     internal class Q2AddTwoNumbers
@@ -30,12 +25,69 @@ namespace Leetcode
         // break the new integer and store it in a new array (each digit as a separate member inside the array )
         // return the new list
 
+        
+
+
+
         public static int[] Solution(int[] list1, int[] list2)
         {
             int[] result = [1];
-            return result;
+            string temp1 = "";
+            string temp2 = "";
+
+            while(l1 != null)
+            {
+                temp1 = l1.val.ToString();
+
+            }
+
+
+
+            int x = Extracting(list1) + Extracting(list2);
+            int reverse = 0;
+            int[] z = [x.ToString().Count()+1];
+
+            while(x > 0)
+            {
+                int i = 0;
+                int remainder = x % 10;
+                z[i] = remainder;
+                reverse = (reverse * 10) + remainder;
+                x = x / 10;
+            }
+            Console.WriteLine(reverse);            
+
+            return z;
+        }
+
+        public static int Extracting(int[] e)
+        {
+            string a = "";
+            foreach (var _ in e)
+            {
+                a += _.ToString();
+            }
+
+            if(int.TryParse(a, out int digit))
+            {
+            return digit;
+
+            }
+
+            return 0;            
+
         }
     }
 
-
+    public class ListNode()
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+            
+        }
+    }
 }
